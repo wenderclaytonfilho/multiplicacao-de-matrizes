@@ -7,8 +7,7 @@ def read_file(file):
         for i in range (size[0]):
             line = list(map(float,f.readline().split()))
             matrix.append(line)
-        print(size)
-        print(matrix)
+
         return(matrix)
 
 def write_file(matrix,file):
@@ -27,8 +26,8 @@ def multiply_matrix(m1, m2):
 
 if __name__ == "__main__":
     #Por algum motivo, simplesmente só lê se colocar o Path completo
-    matrix1 = read_file("../matrizes/4_int.txt")
-    matrix2 = read_file("../matrizes/4_int.txt")
+    matrix1 = read_file("../matrizes/10_float.txt")
+    matrix2 = read_file("../matrizes/10_float.txt")
 
     if len(matrix1[0]) != len(matrix2):
         print('Não podem ser multiplicadas')
