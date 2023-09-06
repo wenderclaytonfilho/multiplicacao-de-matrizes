@@ -66,14 +66,13 @@ def main():
         start_row, end_row, start_col, end_col = workload[i]
         result[start_row:end_row, start_col:end_col] = partial_result.get()
 
-    write_matrix_to_file(result_filename, result)
 
     inicio = time.time()
     fim = time.time()
     tempofinal = inicio - fim
 
 
-    with open('resultado.txt', 'w') as arquivo_saida:
+    with open('resultado_P2.txt', 'w') as arquivo_saida:
         arquivo_saida.write("Variacao do programa: P2 \n")
         arquivo_saida.write("Numero de Cores: \n")
         arquivo_saida.write("Numero de computadores Remotos: \n")

@@ -1,0 +1,11 @@
+Variacao do programa: P4
+Numero de Cores: 8
+Numero de threads: 4
+Numero de linhas da matriz: 4
+Numero de colunas da matriz: 4
+Tempo de processamento com threads: 0.0016009808
+
+16.0 16.0 16.0 16.0
+16.0 16.0 16.0 16.0
+16.0 16.0 16.0 16.0
+16.0 16.0 16.0 16.0

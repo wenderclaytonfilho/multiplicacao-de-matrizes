@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
         result = multiply_matrix(matrix1,matrix2)
         
-        with open('resultado.txt', 'w') as arquivo_saida:
+        with open('resultado_P1.txt', 'w') as arquivo_saida:
             arquivo_saida.write("Variacao do programa: P1 \n")
             arquivo_saida.write("Numero de Cores: \n")
             arquivo_saida.write("Numero de computadores Remotos: \n")
@@ -50,4 +50,4 @@ if __name__ == "__main__":
             for row in result:
                 arquivo_saida.write(' '.join(map(str, row)) + '\n')
 
-        print("Multiplicado com sucesso")
+        print("Multiplicado com sucesso, salvo localmente em resultado_P1.txt")
