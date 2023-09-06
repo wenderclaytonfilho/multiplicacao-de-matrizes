@@ -1,5 +1,7 @@
 import numpy as np
 import multiprocessing
+import time
+import os
 
 def load_matrix(filename):
     with open(filename, 'r') as file:
@@ -34,8 +36,8 @@ def write_matrix_to_file(filename, matrix):
             file.write(" ".join(map(str, row)) + "\n")
 
 def main():
-    A_filename = "../matrizes/10_float.txt"
-    B_filename = "../matrizes/10_float.txt"
+    A_filename = "4_int.txt"
+    B_filename = "4_int.txt"
     result_filename = "./resultado.txt"
 
     A, (A_rows, A_cols) = load_matrix(A_filename)
@@ -65,7 +67,26 @@ def main():
         result[start_row:end_row, start_col:end_col] = partial_result.get()
 
     write_matrix_to_file(result_filename, result)
+
+    inicio = time.time()
+    fim = time.time()
+    tempofinal = inicio - fim
+
+
+    with open('resultado.txt', 'w') as arquivo_saida:
+        arquivo_saida.write("Variacao do programa: P1 \n")
+        arquivo_saida.write("Numero de Cores: \n")
+        arquivo_saida.write("Numero de computadores Remotos: \n")
+        arquivo_saida.write("Numero de linhas da matriz: {}\n".format(len(result)))
+        arquivo_saida.write("Numero de colunas da matriz: {}\n".format(len(result[0])))
+        arquivo_saida.write("Tempo de processamento: {:.10f}\n".format(tempofinal))
+        arquivo_saida.write("\n")
+        for row in result:
+            arquivo_saida.write(' '.join(map(str, row)) + '\n')
+
     print(f"Salvo em: {result_filename}.")
+
+    print(f"Tempo de processamento: {tempofinal} segundos")
 
 if __name__ == "__main__":
     main()

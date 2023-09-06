@@ -1,0 +1,11 @@
+Variacao do programa: P1 
+Numero de Cores: 
+Numero de computadores Remotos: 
+Numero de linhas da matriz: 4
+Numero de colunas da matriz: 4
+Tempo de processamento: 0.0000000000
+
+16.0 16.0 16.0 16.0
+16.0 16.0 16.0 16.0
+16.0 16.0 16.0 16.0
+16.0 16.0 16.0 16.0
