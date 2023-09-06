@@ -74,7 +74,7 @@ def main():
 
 
     with open('resultado.txt', 'w') as arquivo_saida:
-        arquivo_saida.write("Variacao do programa: P1 \n")
+        arquivo_saida.write("Variacao do programa: P2 \n")
         arquivo_saida.write("Numero de Cores: \n")
         arquivo_saida.write("Numero de computadores Remotos: \n")
         arquivo_saida.write("Numero de linhas da matriz: {}\n".format(len(result)))
