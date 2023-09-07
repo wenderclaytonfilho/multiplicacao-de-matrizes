@@ -2,6 +2,22 @@ import time
 import threading
 import os
 
+def read_from_file(file_name):
+    matrix = []
+    with open(file_name, 'r') as arquivo:
+        size = arquivo.readline().split()
+        row = int(size[0])
+        for _ in range(row):
+            row = [float(num) for num in arquivo.readline().split()]  
+            matrix.append(row)
+    return matrix
+
+def check_compatibility(a,b):
+    if a!=b:
+        print("Matrizes incompatíveis para multiplicação")
+        return False
+    else:
+        return True
 
 def partial_multiplication(result,m1, m2, r0, rn, c0, cn):
     for i in range(r0,rn):
@@ -10,12 +26,6 @@ def partial_multiplication(result,m1, m2, r0, rn, c0, cn):
             for k in range (len(m1[0])):
                 result[i][j] += m1[i][k] * m2[k][j]
 
-def check_compatibility(a,b):
-    if a!=b:
-        print("Matrizes incompatíveis para multiplicação")
-        return False
-    else:
-        return True
 
 
 def threading_multiplication(m1,m2,num_threads):
@@ -42,16 +52,6 @@ def threading_multiplication(m1,m2,num_threads):
         thread.join()
 
     return result
-
-def read_from_file(file_name):
-    matrix = []
-    with open(file_name, 'r') as arquivo:
-        size = arquivo.readline().split()
-        row = int(size[0])
-        for _ in range(row):
-            row = [float(num) for num in arquivo.readline().split()]  
-            matrix.append(row)
-    return matrix
 
 
 def main():

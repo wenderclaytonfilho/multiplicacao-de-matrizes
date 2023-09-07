@@ -3,7 +3,7 @@ Numero de Cores: 8
 Numero de threads: 16
 Numero de linhas da matriz: 4
 Numero de colunas da matriz: 4
-Tempo de processamento com threads: 0.0095126629
+Tempo de processamento com threads: 0.0110020638
 
 16.0 16.0 16.0 16.0
 16.0 16.0 16.0 16.0
