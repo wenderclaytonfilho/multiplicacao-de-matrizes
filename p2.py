@@ -75,7 +75,7 @@ def main():
     with open('resultado_P2.txt', 'w') as arquivo_saida:
         arquivo_saida.write("Variacao do programa: P2 \n")
         arquivo_saida.write("Numero de Cores: {}\n".format(num_processes))
-        arquivo_saida.write("Numero de computadores Remotos: \n")
+        arquivo_saida.write("Numero de computadores Remotos: 0 \n")
         arquivo_saida.write("Numero de linhas da matriz: {}\n".format(len(result)))
         arquivo_saida.write("Numero de colunas da matriz: {}\n".format(len(result[0])))
         arquivo_saida.write("Tempo de processamento: {:.10f}\n".format(tempofinal))
