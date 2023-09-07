@@ -52,7 +52,7 @@ def main():
 
     partial_results = []
     workload = distribute_workload(A_rows, B_cols, num_processes)
-
+    inicio = time.time()
     for work in workload:
         partial_result = pool.apply_async(compute_partial_product, args=(A, B, *work))
         partial_results.append(partial_result)
@@ -67,14 +67,14 @@ def main():
         result[start_row:end_row, start_col:end_col] = partial_result.get()
 
 
-    inicio = time.time()
+    
     fim = time.time()
-    tempofinal = inicio - fim
+    tempofinal =  fim - inicio
 
 
     with open('resultado_P2.txt', 'w') as arquivo_saida:
         arquivo_saida.write("Variacao do programa: P2 \n")
-        arquivo_saida.write("Numero de Cores: \n")
+        arquivo_saida.write("Numero de Cores: {}\n".format(num_processes))
         arquivo_saida.write("Numero de computadores Remotos: \n")
         arquivo_saida.write("Numero de linhas da matriz: {}\n".format(len(result)))
         arquivo_saida.write("Numero de colunas da matriz: {}\n".format(len(result[0])))

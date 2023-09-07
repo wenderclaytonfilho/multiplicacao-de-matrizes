@@ -56,8 +56,8 @@ def read_from_file(file_name):
 
 def main():
 
-    m1 = read_from_file('4_int.txt')
-    m2 = read_from_file('4_int.txt')
+    m1 = read_from_file('512.txt')
+    m2 = read_from_file('512.txt')
 
     cores = os.cpu_count()
 
